@@ -1,0 +1,46 @@
+.home-main {
+  background-image: linear-gradient(
+                  rgba(0, 0, 0, 0.7),
+                  rgba(0, 0, 0, 0.7)
+  ), url('../../resources/images/homebg.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  //background-repeat: no-repeat;
+  height: 250px;
+  background-position: 0 -250px;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.home-content-container {
+  margin-top: 75px;
+  margin-bottom: 100px;
+  width: 920px;
+  font-size: 72px;
+  color: white;
+  line-height: 1.25em;
+}
+
+@media (max-width: 992px) {
+  .home-content-container {
+    margin: 50px 15%;
+    width: 70%;
+    font-size: 3.7rem;
+  }
+}
+
+@media (max-width: 1380px) {
+  .home-main {
+    background-position: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-content-container {
+    margin: 50px 15%;
+    width: 70%;
+    font-size: 3rem;
+  }
+}

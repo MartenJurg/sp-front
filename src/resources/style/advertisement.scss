@@ -1,0 +1,86 @@
+.advertisement-container {
+  max-width: 600px !important;
+  min-width: 600px !important;
+}
+
+.offer-card {
+  min-width: 400px !important;
+}
+
+.offer-card-inner {
+  height: 300px;
+}
+
+.offer-price {
+  font-size: 60px;
+  color: #444444;
+}
+
+.ad-header {
+  font-weight: 400;
+  color: #555555;
+}
+
+.gray {
+  color: gray;
+}
+
+.small {
+  font-size: 10px;
+}
+
+.topic {
+  min-width: 200px !important;
+  max-width: 200px !important;
+}
+
+.ad {
+  margin: 20px !important;
+}
+
+.advertisement-text {
+  font-weight: 700 !important;
+  width: auto;
+  word-wrap:break-word;
+  display:block
+}
+
+.ad-img {
+  height: 283px;
+}
+
+@media (max-width: 1200px) {
+
+  .ad-img {
+    height: 238px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .ad-img {
+    height: 298px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ad-img {
+    height: 358px;
+  }
+}
+
+.no-resize {
+  resize: none !important;
+}
+
+.red-border {
+  border: 2px solid red !important;
+}
+
+.red-border-sm {
+  border: 1px solid red !important;
+}
+
+.color-red {
+  color: red !important;
+}

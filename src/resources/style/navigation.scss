@@ -1,0 +1,24 @@
+.nav-item {
+  padding: 10px;
+  color: #555;
+  text-decoration: none !important;
+  transition-duration: 0s !important;
+}
+
+.nav-item:hover {
+  color: black;
+  transition-duration: 0.3s;
+}
+
+.logo {
+  margin-left: 50px;
+}
+
+@media (max-width: 768px) {
+
+  .logo {
+    width: 100px !important;
+    margin-left: 0px !important;
+  }
+
+}

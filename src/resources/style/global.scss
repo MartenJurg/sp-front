@@ -1,0 +1,133 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #DFEDEF !important;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 650px;
+  min-width: 650px;
+  margin: 0 auto;
+}
+
+.global-bg {
+  background-color: #DFEDEF;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.button-basic {
+  border-radius: 0 !important;
+  background-color: rgba(20, 100, 163, 1) !important;
+  border: solid transparent 0px !important;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.45) !important;
+  padding: 10px 20px !important;
+  margin-top: 50px;
+}
+
+.button-basic:hover {
+  background-color: rgba(20, 80, 150, 0.65) !important;
+  transition-duration: 0.4s;
+}
+
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.Absolute-Center.is-Responsive {
+  height: 550px;
+  min-width: 450px;
+  max-width: 450px;
+  padding: 40px;
+}
+
+.custom-loader {
+  justify-content: center !important;
+  align-items: center;
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  padding: 15px 25px;
+  border-bottom: 1px solid lightgray;
+  margin-left: 0;
+}
+
+ul li:hover {
+  cursor: pointer;
+  /*border-bottom: 3px solid rgba(20, 80, 150, 0.65) !important;*/
+}
+
+
+.custom-active {
+  border-bottom: 3px solid rgba(20, 80, 150, 0.65) !important;
+  color: black !important;
+  /*font-weight: 500 !important;*/
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+.react-dropdown-select-option {
+  color: #1464a3 !important;
+  background-color: white !important;
+  font-weight: bold !important;
+}
+
+.react-dropdown-select-item-selected {
+  background-color: #1464a3 !important;
+  color: white !important;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.advertisement-img {
+  width: 100% !important;
+}
+
+a {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 100% !important;
+    max-width: 768px !important;
+    min-width: 375px !important;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .advertisement-img {
+  }
+
+}

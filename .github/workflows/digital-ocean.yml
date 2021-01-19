@@ -1,0 +1,43 @@
+name: digital-ocean
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Publish to Github Packages Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: DEVELOPEST/StudentPraxis-front/sp-front
+          registry: docker.pkg.github.com
+          username: ${{ secrets.SP_USERNAME }}
+          password: ${{ secrets.SP_TOKEN }}
+          dockerfile: Dockerfile
+          tags: ${{ github.sha }}
+      - name: Deploy package to digitalocean
+        uses: appleboy/ssh-action@master
+        env:
+          GITHUB_USERNAME: ${{ secrets.SP_USERNAME }}
+          GITHUB_TOKEN: ${{ secrets.SP_TOKEN }}
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          envs: GITHUB_USERNAME, GITHUB_TOKEN
+          script: |
+            docker stop sp-front || true
+            docker system prune -f
+            docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
+            docker run --name=sp-front \
+              --network="api-internal-network" \
+              -p 80:80 \
+              -v /opt/sp/files:/var/www/files \
+              -d docker.pkg.github.com/developest/studentpraxis-front/sp-front:${{ github.sha }}
+            docker container list
